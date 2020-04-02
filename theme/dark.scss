@@ -2,3 +2,7 @@
 @import "./cyborg/variables.scss";
 @import "./bootstrap/bootstrap.scss";
 @import "./cyborg/bootswatch.scss";
+
+.to-invert {
+    filter: invert(100%)
+}

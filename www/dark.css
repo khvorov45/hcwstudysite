@@ -1,10 +1,14 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap");
+.logo {
+  height: 148px;
+  width: 148px; }
+
 /*!
  * Bootstrap v4.0.0 (https://getbootstrap.com)
  * Copyright 2011-2018 The Bootstrap Authors
  * Copyright 2011-2018 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
-@import url("https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap");
 :root {
   --color-blue: #2A9FD6;
   --color-indigo: #6610f2;
@@ -6644,3 +6648,6 @@ legend {
 
 .popover-title {
   border-bottom: none; }
+
+.to-invert {
+  filter: invert(100%); }
