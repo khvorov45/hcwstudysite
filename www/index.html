@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="dark.css">
+    <link id="theme-css" rel="stylesheet" href="dark.css">
 
     <title>HCW flu study</title>
 </head>
@@ -16,6 +16,11 @@
     <p>
         <a href="/shinyreports/">Link to reports</a>
     </p>
+
+    <div class="custom-control custom-switch">
+        <input type="checkbox" class="custom-control-input" id="dark" onclick="switch_theme()" checked="true">
+        <label class="custom-control-label" for="dark">Dark</label>
+    </div>
 
     <!-- Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
@@ -27,6 +32,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
