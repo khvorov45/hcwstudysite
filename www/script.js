@@ -9,3 +9,5 @@ function switch_theme() {
         theme_css.href = light_theme
     }
 }
+
+$("[name='my-checkbox']").bootstrapSwitch();
