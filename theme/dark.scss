@@ -4,6 +4,7 @@ $blue:    #01238a;
 @import "./cyborg/variables.scss";
 @import "./bootstrap/bootstrap.scss";
 @import "./cyborg/bootswatch.scss";
+@import "./bootstrap-switch.scss";
 
 .to-invert {
     filter: invert(100%)
