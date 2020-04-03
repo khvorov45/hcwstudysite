@@ -3,6 +3,12 @@
   height: 148px;
   width: 148px; }
 
+a:active, a:focus {
+  outline: 0;
+  border: none;
+  -moz-outline-style: none;
+  outline-style: none; }
+
 /*!
  * Bootstrap v4.0.0 (https://getbootstrap.com)
  * Copyright 2011-2018 The Bootstrap Authors
@@ -6651,3 +6657,9 @@ legend {
 
 .to-invert {
   filter: invert(100%); }
+
+a {
+  color: #5f86fc; }
+
+a:hover {
+  color: #afc3ff; }

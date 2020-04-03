@@ -6,5 +6,13 @@ $blue:    #01238a;
 @import "./cyborg/bootswatch.scss";
 
 .to-invert {
-    filter: invert(100%)
+    filter: invert(100%);
+}
+
+a {
+    color: #5f86fc;
+}
+
+a:hover {
+    color: #afc3ff
 }
