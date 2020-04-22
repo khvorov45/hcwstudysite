@@ -1,3 +1,17 @@
-baseURL = "http://example.org/"
+baseURL = "https://hcwflustudy.com/"
 languageCode = "en-us"
-title = "My New Hugo Site"
+title = "HCW Flu Study"
+theme = "LoveIt"
+
+[params]
+  # LoveIt theme version
+  version = "0.1.X"
+
+[menu]
+  [[menu.main]]
+    identifier = "Reports"
+    pre = ""
+    name = "Reports"
+    url = "/shinyreports/"
+    title = ""
+    weight = 1
