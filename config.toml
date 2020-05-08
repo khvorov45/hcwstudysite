@@ -5,7 +5,7 @@ theme = "LoveIt"
 
 [params]
   # LoveIt theme version
-  version = "0.1.X"
+  version = "0.2.X"
   description = "HCW Flu Study site"
 
 [menu]
