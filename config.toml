@@ -16,3 +16,10 @@ theme = "LoveIt"
     url = "/shinyreports/"
     title = ""
     weight = 1
+  [[menu.main]]
+    identifier = "New reports"
+    pre = ""
+    name = "New reports"
+    url = "https://reports.hcwflustudy.com"
+    title = ""
+    weight = 1
