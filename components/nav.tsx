@@ -32,6 +32,9 @@ const useStyles = makeStyles((theme: Theme) =>
       "& .active": {
         backgroundColor: theme.palette.primary[theme.palette.type],
       },
+      "& .activeAlways": {
+        backgroundColor: theme.palette.secondary[theme.palette.type],
+      },
     },
     simpleNav: {
       height: 50,
@@ -67,7 +70,7 @@ export default function Nav({
       {/* LEFT */}
       <div>
         <Link href="/" passHref>
-          <IconButton className={active("/") ? "active" : ""}>
+          <IconButton className="activeAlways">
             <Home />
           </IconButton>
         </Link>
