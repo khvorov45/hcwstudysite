@@ -7,7 +7,7 @@ import {
   Theme,
   useTheme,
 } from "@material-ui/core"
-import BrightnessMediumIcon from "@material-ui/icons/BrightnessMedium"
+import themeLightDark from "@iconify/icons-mdi/theme-light-dark"
 import Home from "@material-ui/icons/Home"
 import GitHubIcon from "@material-ui/icons/GitHub"
 import React from "react"
@@ -88,7 +88,7 @@ export default function Nav({
         </a>
         <NavDivider />
         <IconButton onClick={(_) => togglePalette()}>
-          <BrightnessMediumIcon />
+          <Icon icon={themeLightDark} />
         </IconButton>
       </div>
     </div>
