@@ -5,7 +5,7 @@
 Top-left:
 
 - Home (main page of this site)
-- Reports
+- Reports (main page)
 - About (this page)
 
 Top-right:
