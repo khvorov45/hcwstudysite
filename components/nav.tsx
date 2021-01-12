@@ -51,6 +51,7 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     divider: {
       marginLeft: 5,
+      marginRight: 5,
       color: theme.palette.divider,
       width: 2,
     },
@@ -79,6 +80,7 @@ export default function Nav({
             <Icon icon={reportIcon} />
           </IconButton>
         </a>
+        <NavDivider />
         <Link href="/about" passHref>
           <IconButton className={active("/about") ? "active" : ""}>
             <Icon icon={questionCircle} />
