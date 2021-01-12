@@ -5,6 +5,7 @@ import {
   IconButton,
   makeStyles,
   Theme,
+  Tooltip,
   useTheme,
 } from "@material-ui/core"
 import themeLightDark from "@iconify/icons-mdi/theme-light-dark"
@@ -71,20 +72,27 @@ export default function Nav({
       {/* LEFT */}
       <div>
         <Link href="/" passHref>
-          <IconButton className="activeAlways">
-            <Home />
-          </IconButton>
+          <Tooltip title="Main page">
+            <IconButton className="activeAlways">
+              <Home />
+            </IconButton>
+          </Tooltip>
         </Link>
+
         <a href="https://reports.hcwflustudy.com">
-          <IconButton>
-            <Icon icon={reportIcon} />
-          </IconButton>
+          <Tooltip title="Reports">
+            <IconButton>
+              <Icon icon={reportIcon} />
+            </IconButton>
+          </Tooltip>
         </a>
         <NavDivider />
         <Link href="/about" passHref>
-          <IconButton className={active("/about") ? "active" : ""}>
-            <Icon icon={questionCircle} />
-          </IconButton>
+          <Tooltip title="About">
+            <IconButton className={active("/about") ? "active" : ""}>
+              <Icon icon={questionCircle} />
+            </IconButton>
+          </Tooltip>
         </Link>
       </div>
       {/* CENTER */}
@@ -92,9 +100,11 @@ export default function Nav({
       {/* RIGHT */}
       <div>
         <NavDivider />
-        <IconButton onClick={(_) => togglePalette()}>
-          <Icon icon={themeLightDark} />
-        </IconButton>
+        <Tooltip title="Switch theme">
+          <IconButton onClick={(_) => togglePalette()}>
+            <Icon icon={themeLightDark} />
+          </IconButton>
+        </Tooltip>
       </div>
     </div>
   )
