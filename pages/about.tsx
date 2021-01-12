@@ -1,10 +1,11 @@
+import React from "react"
 import Layout from "../components/layout"
-import fs from "fs"
 import Markdown from "../components/markdown"
+import fs from "fs"
 
-export default function Home({ md }: { md: string }) {
+export default function About({ md }: { md: string }) {
   return (
-    <Layout active={(s) => s === "/"}>
+    <Layout active={(s) => s === "/about"}>
       <Markdown content={md} />
     </Layout>
   )
@@ -13,7 +14,7 @@ export default function Home({ md }: { md: string }) {
 export async function getStaticProps() {
   return {
     props: {
-      md: fs.readFileSync("content/home.md", "utf-8"),
+      md: fs.readFileSync("content/about.md", "utf-8"),
     },
   }
 }
