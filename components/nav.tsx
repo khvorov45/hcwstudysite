@@ -1,9 +1,11 @@
 import {
   Button,
   createStyles,
+  Divider,
   IconButton,
   makeStyles,
   Theme,
+  useTheme,
 } from "@material-ui/core"
 import BrightnessMediumIcon from "@material-ui/icons/BrightnessMedium"
 import Home from "@material-ui/icons/Home"
@@ -84,6 +86,7 @@ export default function Nav({
             <GitHubIcon />
           </IconButton>
         </a>
+        <NavDivider />
         <IconButton onClick={(_) => togglePalette()}>
           <BrightnessMediumIcon />
         </IconButton>
@@ -131,5 +134,16 @@ function ButtonLink({
         {name}
       </Button>
     </Link>
+  )
+}
+
+function NavDivider() {
+  const theme = useTheme()
+  return (
+    <Divider
+      orientation="vertical"
+      flexItem
+      style={{ marginLeft: 5, color: theme.palette.divider, width: 2 }}
+    />
   )
 }
