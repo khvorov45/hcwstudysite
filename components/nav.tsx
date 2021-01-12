@@ -10,6 +10,8 @@ import Home from "@material-ui/icons/Home"
 import GitHubIcon from "@material-ui/icons/GitHub"
 import React from "react"
 import Link from "next/link"
+import { Icon } from "@iconify/react"
+import reportIcon from "@iconify/icons-carbon/report"
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -73,7 +75,9 @@ export default function Nav({
       {/* RIGHT */}
       <div>
         <a href="https://reports.hcwflustudy.com">
-          <Button>Reports</Button>
+          <IconButton>
+            <Icon icon={reportIcon} />
+          </IconButton>
         </a>
         <a href="https://github.com/khvorov45/hcwstudysite">
           <IconButton>
