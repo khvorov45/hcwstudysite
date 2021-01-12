@@ -6,10 +6,10 @@ Top-left:
 
 - Home (overview)
 - About (this page)
+- Reports
 
 Top-right:
 
-- Reports
 - Theme switch (light/dark)
 
 ---

@@ -71,6 +71,11 @@ export default function Nav({
             <Home />
           </IconButton>
         </Link>
+        <a href="https://reports.hcwflustudy.com">
+          <IconButton>
+            <Icon icon={reportIcon} />
+          </IconButton>
+        </a>
         <Link href="/about" passHref>
           <IconButton className={active("/about") ? "active" : ""}>
             <Icon icon={questionCircle} />
@@ -81,11 +86,6 @@ export default function Nav({
       <div></div>
       {/* RIGHT */}
       <div>
-        <a href="https://reports.hcwflustudy.com">
-          <IconButton>
-            <Icon icon={reportIcon} />
-          </IconButton>
-        </a>
         <NavDivider />
         <IconButton onClick={(_) => togglePalette()}>
           <Icon icon={themeLightDark} />
