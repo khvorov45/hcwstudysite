@@ -81,11 +81,6 @@ export default function Nav({
             <Icon icon={reportIcon} />
           </IconButton>
         </a>
-        <a href="https://github.com/khvorov45/hcwstudysite">
-          <IconButton>
-            <GitHubIcon />
-          </IconButton>
-        </a>
         <NavDivider />
         <IconButton onClick={(_) => togglePalette()}>
           <Icon icon={themeLightDark} />
