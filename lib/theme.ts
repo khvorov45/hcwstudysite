@@ -1,6 +1,6 @@
 import { createMuiTheme } from "@material-ui/core"
 
-function createTheme(paletteType: "dark" | "light") {
+export function createTheme(paletteType: "dark" | "light") {
   return createMuiTheme({
     overrides: {
       MuiCssBaseline: {
@@ -37,5 +37,4 @@ function createTheme(paletteType: "dark" | "light") {
   })
 }
 
-const theme = createTheme("dark")
-export default theme
+export const darkTheme = createTheme("dark")
