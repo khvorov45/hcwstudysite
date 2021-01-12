@@ -33,6 +33,8 @@ export function createTheme(paletteType: "dark" | "light") {
       background: {
         default: paletteType === "dark" ? "rgb(0, 0, 0)" : "rgb(255, 255, 255)",
       },
+      divider:
+        paletteType === "dark" ? "rgb(70, 70, 70)" : "rgb(200, 200, 200)",
     },
   })
 }
