@@ -1,5 +1,6 @@
 import {
   createStyles,
+  Divider,
   Link as MaterialLink,
   Theme,
   withStyles,
@@ -17,7 +18,9 @@ export default function Markdown({ content }: { content: string }) {
         paddingRight: 20,
       }}
     >
-      <ReactMarkdown renderers={{ link: Link }}>{content}</ReactMarkdown>
+      <ReactMarkdown renderers={{ link: Link, thematicBreak: Divider }}>
+        {content}
+      </ReactMarkdown>
     </div>
   )
 }
