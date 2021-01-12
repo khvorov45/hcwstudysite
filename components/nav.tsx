@@ -143,12 +143,6 @@ function ButtonLink({
 }
 
 function NavDivider() {
-  const theme = useTheme()
-  return (
-    <Divider
-      orientation="vertical"
-      flexItem
-      style={{ marginLeft: 5, color: theme.palette.divider, width: 2 }}
-    />
-  )
+  const classes = useStyles()
+  return <Divider orientation="vertical" flexItem className={classes.divider} />
 }
