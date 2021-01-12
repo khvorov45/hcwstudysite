@@ -13,6 +13,7 @@ import React from "react"
 import Link from "next/link"
 import { Icon } from "@iconify/react"
 import reportIcon from "@iconify/icons-carbon/report"
+import questionCircle from "@iconify/icons-bi/question-circle"
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -68,6 +69,11 @@ export default function Nav({
         <Link href="/" passHref>
           <IconButton className={active("/") ? "active" : ""}>
             <Home />
+          </IconButton>
+        </Link>
+        <Link href="/about" passHref>
+          <IconButton className={active("/about") ? "active" : ""}>
+            <Icon icon={questionCircle} />
           </IconButton>
         </Link>
       </div>
