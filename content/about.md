@@ -4,9 +4,9 @@
 
 Top-left:
 
-- Home (overview)
-- About (this page)
+- Home (main page of this site)
 - Reports
+- About (this page)
 
 Top-right:
 
