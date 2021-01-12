@@ -1,6 +1,7 @@
 import { createMuiTheme, CssBaseline, ThemeProvider } from "@material-ui/core"
 import Head from "next/head"
 import React, { ReactNode, useEffect, useState } from "react"
+import { createTheme } from "../lib/theme"
 import Nav from "./nav"
 
 function paletteTypeInit(): "dark" | "light" {
@@ -34,40 +35,7 @@ export default function Layout({
     document.documentElement.setAttribute("theme", newPaletteType)
     localStorage.setItem("theme", newPaletteType)
   }
-  const theme = createMuiTheme({
-    overrides: {
-      MuiCssBaseline: {
-        "@global": {
-          "html, html *": {
-            "scrollbar-color":
-              "rgb(150, 150, 150) " +
-              (paletteType === "dark" ? "rgb(0, 0, 0)" : "rgb(255, 255, 255)"),
-          },
-          "::-webkit-scrollbar-thumb:hover": {
-            background:
-              paletteType === "dark" ? "rgb(255, 255, 255)" : "rgb(0, 0, 0)",
-          },
-          "::-webkit-scrollbar-thumb": {
-            background: "rgb(150, 150, 150)",
-          },
-          "::-webkit-scrollbar-track, ::-webkit-scrollbar-corner": {
-            background:
-              paletteType === "dark" ? "rgb(0, 0, 0)" : "rgb(255, 255, 255)",
-          },
-          "::-webkit-scrollbar": {
-            width: 10,
-            height: 10,
-          },
-        },
-      },
-    },
-    palette: {
-      type: paletteType,
-      background: {
-        default: paletteType === "dark" ? "rgb(0, 0, 0)" : "rgb(255, 255, 255)",
-      },
-    },
-  })
+  const theme = createTheme(paletteType)
 
   return (
     <div>
