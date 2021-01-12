@@ -9,7 +9,6 @@ import {
 } from "@material-ui/core"
 import themeLightDark from "@iconify/icons-mdi/theme-light-dark"
 import Home from "@material-ui/icons/Home"
-import GitHubIcon from "@material-ui/icons/GitHub"
 import React from "react"
 import Link from "next/link"
 import { Icon } from "@iconify/react"
