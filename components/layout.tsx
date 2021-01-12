@@ -1,5 +1,4 @@
-import { createMuiTheme, CssBaseline, ThemeProvider } from "@material-ui/core"
-import Head from "next/head"
+import { CssBaseline, ThemeProvider } from "@material-ui/core"
 import React, { ReactNode, useEffect, useState } from "react"
 import { createTheme } from "../lib/theme"
 import Nav from "./nav"
@@ -39,10 +38,6 @@ export default function Layout({
 
   return (
     <div>
-      <Head>
-        <title>NIH HCW Flu Study</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <Nav togglePalette={togglePaletteType} active={active} />
