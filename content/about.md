@@ -4,9 +4,9 @@
 
 Top-left:
 
-- Home (main page of this site)
-- Reports (main page)
-- About (this page)
+- [Home](/) (main page of this site)
+- [Reports](https://reports.hcwflustudy.com) (main page)
+- [About](/about) (this page)
 
 Top-right:
 
