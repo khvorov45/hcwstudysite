@@ -8,6 +8,7 @@ import {
 } from "@material-ui/core"
 import React from "react"
 import ReactMarkdown from "react-markdown"
+import { LinkRenderer } from "./link"
 
 const useStyles = makeStyles((theme: Theme) => ({
   md: {
@@ -24,18 +25,9 @@ export default function Markdown({ content }: { content: string }) {
   const classes = useStyles()
   return (
     <div className={classes.md}>
-      <ReactMarkdown renderers={{ link: Link, thematicBreak: Divider }}>
+      <ReactMarkdown renderers={{ link: LinkRenderer, thematicBreak: Divider }}>
         {content}
       </ReactMarkdown>
     </div>
   )
 }
-
-const Link = withStyles((theme: Theme) =>
-  createStyles({
-    root: {
-      color:
-        theme.palette.primary[theme.palette.type === "dark" ? "light" : "dark"],
-    },
-  })
-)(MaterialLink)
