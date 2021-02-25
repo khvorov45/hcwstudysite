@@ -2,12 +2,12 @@
   import Button from "./Button.svelte"
   import Home from "./icons/Home.svelte"
   import Report from "./icons/Report.svelte"
-  import Help from "./icons/Help.svelte"
   import ThemeSwitch from "./icons/ThemeSwitch.svelte"
   import { tooltip } from "../lib/tooltip"
   import Tooltip from "./Tooltip.svelte"
   import { toggleTheme } from "../lib/theme"
   import Search from "./icons/Search.svelte"
+  import Registration from "./icons/Registration.svelte"
 
   export let segment: string
 
@@ -27,10 +27,13 @@
     <div class="element" use:tooltip={tooltipOpts("Home")}>
       <a class:active={segment === "home"} href="home"><Home /></a>
     </div>
-    <div class="element" use:tooltip={tooltipOpts("Reports")}>
-      <a href="https://reports.hcwflustudy.com"><Report /></a>
-    </div>
     <hr class="element" />
+    <div class="element" use:tooltip={tooltipOpts("Registration of interest")}>
+      <a
+        class:active={segment === "registration-of-interest"}
+        href="/registration-of-interest"><Registration /></a
+      >
+    </div>
   </div>
   <div class="group">
     <div class="element" use:tooltip={tooltipOpts("Search")}>

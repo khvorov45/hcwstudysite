@@ -10,25 +10,9 @@
   export let md: string
 </script>
 
-<div class="scroll">
-  <div class="content">{@html md}</div>
-</div>
+{@html md}
 
 <style>
-  .scroll {
-    height: calc(100vh - var(--size-nav));
-    overflow-y: scroll;
-    overflow-x: hidden;
-  }
-  .content {
-    max-width: 56em;
-    margin-top: 1em;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 10px;
-    padding-right: 10px;
-    text-align: justify;
-  }
   :global(li) {
     margin-top: 5px;
     margin-bottom: 5px;
