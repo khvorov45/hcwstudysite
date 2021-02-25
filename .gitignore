@@ -37,3 +37,9 @@ yarn-error.log*
 .sass-cache
 public
 resources
+
+.DS_Store
+/node_modules/
+/src/node_modules/@sapper/
+yarn-error.log
+/__sapper__/

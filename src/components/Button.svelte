@@ -1,0 +1,41 @@
+<script lang="ts">
+  export let variant: "icon" | "text" = "text"
+  export let action: () => void = () => {}
+  export let active = false
+</script>
+
+<div
+  class:icon={variant === "icon"}
+  class:active
+  on:click={action}
+  on:keyup={(e) => e.key === "Enter" && action()}
+  tabindex="0"
+>
+  <slot />
+</div>
+
+<style>
+  div {
+    display: flex;
+    cursor: pointer;
+    user-select: none;
+    align-items: center;
+    justify-content: center;
+    transition: background-color var(--time-transition);
+  }
+  div:hover,
+  div:focus {
+    background-color: var(--color-bg-2);
+  }
+  div:active {
+    background-color: var(--color-bg-3);
+  }
+  div.active {
+    background-color: var(--color-primary-1);
+  }
+  .icon {
+    border-radius: 100%;
+    width: var(--size-icon-button);
+    height: var(--size-icon-button);
+  }
+</style>
