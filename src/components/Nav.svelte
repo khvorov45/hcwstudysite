@@ -43,12 +43,15 @@
 </nav>
 
 <style>
+  :root {
+    --size-nav-border: 2px;
+  }
   nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: calc(var(--size-nav) - 1px);
-    border-bottom: 1px solid var(--color-bg-2);
+    height: calc(var(--size-nav) - var(--size-nav-border));
+    border-bottom: var(--size-nav-border) solid var(--color-bg-2);
     font-weight: 350;
   }
 
@@ -76,10 +79,10 @@
   a {
     text-decoration: none;
     text-transform: capitalize;
-    height: calc(var(--size-nav) - 2px);
+    height: calc(var(--size-nav) - var(--size-nav-border));
     text-align: center;
     line-height: var(--size-nav);
-    border-bottom: 2px solid rgba(0, 0, 0, 0);
+    border-bottom: var(--size-nav-border) solid rgba(0, 0, 0, 0);
     transition: border-bottom var(--time-transition);
   }
 
