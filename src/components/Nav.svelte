@@ -7,6 +7,7 @@
   import { tooltip } from "../lib/tooltip"
   import Tooltip from "./Tooltip.svelte"
   import { toggleTheme } from "../lib/theme"
+  import Search from "./icons/Search.svelte"
 
   export let segment: string
 
@@ -30,11 +31,11 @@
       <a href="https://reports.hcwflustudy.com"><Report /></a>
     </div>
     <hr class="element" />
-    <div class="element" use:tooltip={tooltipOpts("Info")}>
-      <a class:active={segment === "about"} href="about"><Help /></a>
-    </div>
   </div>
   <div class="group">
+    <div class="element" use:tooltip={tooltipOpts("Search")}>
+      <a class:active={segment === "search"} href="search"><Search /></a>
+    </div>
     <hr class="element" />
     <div class="element" use:tooltip={tooltipOpts("Switch theme", "-50%")}>
       <Button variant="icon" action={toggleTheme}><ThemeSwitch /></Button>

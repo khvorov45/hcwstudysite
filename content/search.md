@@ -1,4 +1,4 @@
-# NIH HCW study main site
+# Site map
 
 ## Navigation
 
@@ -6,7 +6,7 @@ Top-left:
 
 - [Home](/) (main page of this site)
 - [Reports](https://reports.hcwflustudy.com) (main page)
-- [About](/about) (this page)
+- [Search](/search) (this page)
 
 Top-right:
 
