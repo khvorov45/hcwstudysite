@@ -2,9 +2,8 @@
 
 ## About
 
-Six hospitals across Australia are conducting a research study in collaboration with the World
-Health Organisation (WHO) Collaborating Centre for Reference and Research on Influenza
-and the London School of Hygiene and Tropical Medicine in the UK. The study aims to
+Six hospitals across Australia are conducting a research study in collaboration with the [World Health Organisation (WHO) Collaborating Centre for Reference and Research on Influenza](http://influenzacentre.org)
+and the [London School of Hygiene and Tropical Medicine in the UK](https://www.lshtm.ac.uk). The study aims to
 examine the immune response to influenza vaccination among hospital workers by measuring
 antibody levels in blood before and after vaccination. The study will also examine the risk of
 infection after vaccination by collecting nasal swabs and blood samples from health care
@@ -12,12 +11,12 @@ workers who develop flu-like illness.
 
 The participating hospitals are:
 
-- The Women’s and Children’s Hospital, North Adelaide
-- Queensland Children’s Hospital, South Brisbane
-- The Alfred, Melbourne
-- John Hunter Hospital, New Lambton Heights
-- Perth Children’s Hospital, Nedlands (Perth)
-- The Children’s Hospital at Westmead
+- [Women’s and Children’s Hospital, Adelaide, SA](https://www.wch.sa.gov.au)
+- [Queensland Children’s Hospital, Brisbane, QLD](https://www.childrens.health.qld.gov.au/qch)
+- [Alfred Hospital, Melbourne, VIC](https://www.alfredhealth.org.au/)
+- [John Hunter Hospital, New Lambton Heights, NSW](http://www.hnehealth.nsw.gov.au/john-hunter-hospital/Pages/Home.aspx)
+- [Perth Children’s Hospital, Nedlands, WA](https://pch.health.wa.gov.au/)
+- [Children’s Hospital at Westmead, NSW](https://www.schn.health.nsw.gov.au/hospitals/chw)
 
 The research study is funded by the US National Institutes of Health grant number
 `1R01AI141534-01A1`. The US National Institutes of Health has also funded a research
@@ -69,52 +68,52 @@ If you are interested in participating, please [complete the form](/registration
 
 ### Coordinating sites
 
-- The Peter Doherty Institute for Infection and Immunity, Melbourne, Australia
-  - A/Prof Sheena Sullivan
-  - Dr Annette Fox
-- London School of Hygiene and Tropical Medicine, London, United Kingdom
-  - A/Prof Adam Kucharski
+- [Peter Doherty Institute for Infection and Immunity, Melbourne, VIC](https://www.doherty.edu.au/)
+  - [A/Prof Sheena Sullivan](https://www.doherty.edu.au/people/dr-sheena-sullivan)
+  - [Dr Annette Fox](https://www.doherty.edu.au/people/dr-annette-fox)
+- [London School of Hygiene and Tropical Medicine, UK](https://www.lshtm.ac.uk)
+  - [A/Prof Adam Kucharski](https://www.lshtm.ac.uk/aboutus/people/kucharski.adam)
 
 ### Participating sites
 
-- The Women’s and Children’s Hospital, North Adelaide
+- [Women’s and Children’s Hospital, Adelaide, SA](https://www.wch.sa.gov.au)
   - Prof Helen Marshall
-- Queensland Children’s Hospital, South Brisbane
+- [Queensland Children’s Hospital, Brisbane, QLD](https://www.childrens.health.qld.gov.au/qch)
   - A/Prof Julia Clark
-- The Alfred Hospital, Melbourne
+- [Alfred Hospital, Melbourne, VIC](https://www.alfredhealth.org.au/)
   - Prof Allen Cheng
-- John Hunter Hospital, New Lambton Heights
+- [John Hunter Hospital, New Lambton Heights, NSW](http://www.hnehealth.nsw.gov.au/john-hunter-hospital/Pages/Home.aspx)
   - Prof Peter Wark
-- Perth Children’s Hospital, Nedlands (Perth)
+- [Perth Children’s Hospital, Nedlands, WA](https://pch.health.wa.gov.au/)
   - A/Prof Christopher Blyth
-- The Children’s Hospital at Westmead
+- [Children’s Hospital at Westmead, NSW](https://www.schn.health.nsw.gov.au/hospitals/chw)
   - Prof Kristine Macartney
 
 ---
 
 ## Study cordinators
 
-- The Women’s and Children’s Hospital, North Adelaide
+- [Women’s and Children’s Hospital, Adelaide, SA](https://www.wch.sa.gov.au)
   - Kate Riley
     - Email:
     - Phone:
-- Queensland Children’s Hospital, South Brisbane
+- [Queensland Children’s Hospital, Brisbane, QLD](https://www.childrens.health.qld.gov.au/qch)
   - HealthCare Worker Flu Project Research Staff
     - Email: chq_idhcwflu@health.qld.gov.au
     - Phone: 0429 206 919
-- The Alfred Hospital, Melbourne
+- [Alfred Hospital, Melbourne, VIC](https://www.alfredhealth.org.au/)
   - Clinical Research Infectious Diseases Unit
     - Email: clinresearch@alfred.org.au
     - Phone: 0390 766 908
-- John Hunter Hospital, New Lambton Heights
+- [John Hunter Hospital, New Lambton Heights, NSW](http://www.hnehealth.nsw.gov.au/john-hunter-hospital/Pages/Home.aspx)
   - Catherine Delahunty
     - Email:
     - Phone:
-- Perth Children’s Hospital, Nedlands (Perth)
+- [Perth Children’s Hospital, Nedlands, WA](https://pch.health.wa.gov.au/)
   - Marion Macnish
     - Email: HCW.FluStudy@telethonkids.org.au
     - Phone: 0481 060 927
-- The Children’s Hospital at Westmead
+- [Children’s Hospital at Westmead, NSW](https://www.schn.health.nsw.gov.au/hospitals/chw)
   - Ajay Jadhav
     - Email: SCHN-NCIRS-Research@health.nsw.gov.au
     - Phone: 0429 849 440
