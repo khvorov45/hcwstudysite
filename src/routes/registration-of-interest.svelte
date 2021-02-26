@@ -38,19 +38,20 @@ name ${name}`
       getLabel={(s) => s.long}
       label="Site"
       bind:selected={siteSelected}
-      minWidth="350px"
-      maxWidth="350px"
+      minWidth="300px"
+      maxWidth="500px"
     />
     <MultipleChoice
       question="Are you a staff, volunteer, student or honorary personnel at the selected site eligible for the hospital's free vaccination program?"
       options={["yes", "no"]}
       bind:selected={screeningAge}
-      maxWidth="400px"
+      maxWidth="500px"
     />
     <MultipleChoice
       question="Are you between 18 and 60 years of age?"
       options={["yes", "no"]}
       bind:selected={isStaff}
+      maxWidth="500px"
     />
   </div>
   <br />
@@ -67,7 +68,7 @@ name ${name}`
 
 <style>
   form {
-    min-width: 400px;
+    min-width: 350px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -75,11 +76,9 @@ name ${name}`
   }
   :global(.questions > *) {
     margin-bottom: 20px;
-    margin-right: 20px;
   }
   :global(.questions > *:last-child) {
     margin-bottom: 0;
-    margin-right: 0;
   }
   br {
     margin-top: 20px;
