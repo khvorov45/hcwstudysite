@@ -2,9 +2,10 @@
   export let question = ""
   export let options = [""]
   export let selected = ""
+  export let maxWidth = "auto"
 </script>
 
-<div class="container">
+<div class="container" style="max-width: {maxWidth}">
   <div class="question">{question}</div>
   <div class="option-container">
     {#each options as option}
