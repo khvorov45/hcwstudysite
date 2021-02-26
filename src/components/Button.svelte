@@ -6,6 +6,7 @@
 
 <div
   class:icon={variant === "icon"}
+  class:text={variant === "text"}
   class:active
   on:click={action}
   on:keyup={(e) => e.key === "Enter" && action()}
@@ -37,5 +38,12 @@
     border-radius: 100%;
     width: var(--size-icon-button);
     height: var(--size-icon-button);
+  }
+  .text {
+    text-transform: uppercase;
+    font-weight: bold;
+    border: 1px solid var(--color-bg-2);
+    padding-top: 5px;
+    padding-bottom: 5px;
   }
 </style>

@@ -10,9 +10,14 @@
   export let md: string
 </script>
 
-{@html md}
+<div class="md">
+  {@html md}
+</div>
 
 <style>
+  .md {
+    text-align: justify;
+  }
   :global(li) {
     margin-top: 5px;
     margin-bottom: 5px;

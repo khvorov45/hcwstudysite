@@ -27,6 +27,5 @@
     margin-right: auto;
     padding-left: 10px;
     padding-right: 10px;
-    text-align: justify;
   }
 </style>
