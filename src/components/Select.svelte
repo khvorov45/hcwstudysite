@@ -48,6 +48,7 @@
     --size-container-padding: 5px;
   }
   .container {
+    box-sizing: border-box;
     cursor: pointer;
     border: 1px solid var(--color-bg-2);
     padding: var(--size-container-padding);

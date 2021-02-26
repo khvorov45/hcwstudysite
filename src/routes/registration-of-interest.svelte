@@ -1,9 +1,15 @@
 <script lang="ts">
+  import { onMount } from "svelte"
+
   import Button from "../components/Button.svelte"
   import InputField from "../components/InputField.svelte"
   import MultipleChoice from "../components/MultipleChoice.svelte"
   import Select from "../components/Select.svelte"
   import { SITES } from "../lib/config"
+  import { detectScrollbarWidth } from "../lib/util"
+
+  let scrollbarWidth
+  onMount(() => (scrollbarWidth = detectScrollbarWidth()))
 
   let siteSelected: any = undefined
   let screeningAge = undefined
@@ -40,6 +46,7 @@ name ${name}`
       bind:selected={siteSelected}
       minWidth="275px"
       maxWidth="500px"
+      width="calc(100vw - 20px - {scrollbarWidth}px"
     />
     <MultipleChoice
       question="Are you a staff, volunteer, student or honorary personnel at the selected site eligible for the hospital's free vaccination program?"
