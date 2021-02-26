@@ -6,9 +6,23 @@
   import { SITES } from "../lib/config"
 
   let siteSelected: any = undefined
+  let screeningAge = undefined
+
+  let name = ""
+
+  $: eligible = siteSelected !== undefined && screeningAge === "yes"
+
+  $: canSubmit = eligible && name !== ""
 
   function handleSubmit() {
-    console.log(`site ${siteSelected.short}`)
+    if (!canSubmit) {
+      return
+    }
+    console.log(
+      `site ${siteSelected?.short}
+age good ${screeningAge}
+name ${name}`
+    )
   }
 </script>
 
@@ -26,14 +40,17 @@
     <MultipleChoice
       question="Are you between 18 and 60 years of age?"
       options={["yes", "no"]}
+      bind:selected={screeningAge}
     />
   </div>
   <br />
   <div class="questions registration">
-    <InputField label="Name" />
+    <InputField bind:value={name} label="Name" />
   </div>
   <br />
-  <Button action={handleSubmit} maxWidth="100px">Submit</Button>
+  <Button action={handleSubmit} maxWidth="100px" disabled={!canSubmit}
+    >Submit</Button
+  >
 </form>
 
 <style>

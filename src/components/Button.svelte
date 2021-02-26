@@ -4,6 +4,7 @@
   export let active = false
   export let maxWidth = "auto"
   export let minWidth = "auto"
+  export let disabled = false
 </script>
 
 <div
@@ -13,6 +14,7 @@
   class:active
   on:click={action}
   on:keyup={(e) => e.key === "Enter" && action()}
+  class:disabled
   tabindex="0"
 >
   <slot />
@@ -47,5 +49,10 @@
     font-weight: bold;
     border: 1px solid var(--color-bg-2);
     padding: 5px;
+  }
+  div.disabled {
+    color: var(--color-font-2);
+    background-color: var(--color-bg-1);
+    cursor: not-allowed;
   }
 </style>
