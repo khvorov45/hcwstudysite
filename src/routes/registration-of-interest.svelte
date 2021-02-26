@@ -10,6 +10,8 @@
   let isStaff = undefined
 
   let name = ""
+  let mobile = ""
+  let email = ""
 
   $: eligible =
     siteSelected !== undefined && screeningAge === "yes" && isStaff === "yes"
@@ -54,6 +56,8 @@ name ${name}`
   <br />
   <div class="questions registration">
     <InputField bind:value={name} label="Name" />
+    <InputField bind:value={mobile} label="Mobile" />
+    <InputField bind:value={email} label="Email" />
   </div>
   <br />
   <Button action={handleSubmit} maxWidth="100px" disabled={!canSubmit}
