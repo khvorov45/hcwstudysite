@@ -13,7 +13,14 @@
 
 <form>
   <h1>Registration of interest</h1>
-  <div class="questions">
+  <div class="questions eligibility">
+    <MultipleChoice
+      question="Are you between 18 and 60 years of age?"
+      options={["yes", "no"]}
+    />
+  </div>
+  <br />
+  <div class="questions registration">
     <Select
       options={SITES}
       getLabel={(s) => s.long}
@@ -21,10 +28,6 @@
       bind:selected={siteSelected}
       minWidth="350px"
       maxWidth="350px"
-    />
-    <MultipleChoice
-      question="Are you between 18 and 60 years of age?"
-      options={["yes", "no"]}
     />
   </div>
   <br />
