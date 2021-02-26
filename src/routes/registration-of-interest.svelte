@@ -7,10 +7,12 @@
 
   let siteSelected: any = undefined
   let screeningAge = undefined
+  let isStaff = undefined
 
   let name = ""
 
-  $: eligible = siteSelected !== undefined && screeningAge === "yes"
+  $: eligible =
+    siteSelected !== undefined && screeningAge === "yes" && isStaff === "yes"
 
   $: canSubmit = eligible && name !== ""
 
@@ -38,9 +40,15 @@ name ${name}`
       maxWidth="350px"
     />
     <MultipleChoice
-      question="Are you between 18 and 60 years of age?"
+      question="Are you a staff, volunteer, student or honorary personnel at the selected site eligible for the hospital's free vaccination program?"
       options={["yes", "no"]}
       bind:selected={screeningAge}
+      maxWidth="400px"
+    />
+    <MultipleChoice
+      question="Are you between 18 and 60 years of age?"
+      options={["yes", "no"]}
+      bind:selected={isStaff}
     />
   </div>
   <br />
@@ -60,10 +68,6 @@ name ${name}`
     flex-direction: column;
     align-items: center;
     overflow: scroll;
-  }
-  .questions {
-    display: flex;
-    flex-wrap: wrap;
   }
   :global(.questions > *) {
     margin-bottom: 20px;
