@@ -3,10 +3,11 @@
   export let action: () => void = () => {}
   export let active = false
   export let maxWidth = "auto"
+  export let minWidth = "auto"
 </script>
 
 <div
-  style="max-width: {maxWidth}"
+  style="max-width: {maxWidth}; min-width: {minWidth}"
   class:icon={variant === "icon"}
   class:text={variant === "text"}
   class:active
@@ -45,7 +46,6 @@
     text-transform: uppercase;
     font-weight: bold;
     border: 1px solid var(--color-bg-2);
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding: 5px;
   }
 </style>

@@ -5,11 +5,12 @@
   export let getLabel: (x: any) => string
 
   export let maxWidth: string = "auto"
+  export let minWidth = "auto"
 
   let optionsVisible = false
 </script>
 
-<div class="container" style="max-width: {maxWidth}">
+<div class="container" style="max-width: {maxWidth}; min-width: {minWidth}">
   <div class="label" on:click={() => (optionsVisible = !optionsVisible)}>
     <div class="name">
       {label}

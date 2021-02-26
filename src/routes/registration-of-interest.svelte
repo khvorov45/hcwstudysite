@@ -10,19 +10,31 @@
   }
 </script>
 
-<h1>Registration of interest</h1>
-
 <form>
-  <Select
-    options={SITES}
-    getLabel={(s) => s.long}
-    label="Site"
-    bind:selected={siteSelected}
-    maxWidth="350px"
-  />
+  <h1>Registration of interest</h1>
+  <div class="questions">
+    <Select
+      options={SITES}
+      getLabel={(s) => s.long}
+      label="Site"
+      bind:selected={siteSelected}
+      minWidth="350px"
+      maxWidth="350px"
+    />
+  </div>
   <br />
   <Button action={handleSubmit} maxWidth="100px">Submit</Button>
 </form>
 
 <style>
+  form {
+    min-width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: scroll;
+  }
+  br {
+    margin-top: 20px;
+  }
 </style>
