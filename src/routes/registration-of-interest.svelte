@@ -38,7 +38,7 @@ name ${name}`
       getLabel={(s) => s.long}
       label="Site"
       bind:selected={siteSelected}
-      minWidth="300px"
+      minWidth="275px"
       maxWidth="500px"
     />
     <MultipleChoice
@@ -68,11 +68,10 @@ name ${name}`
 
 <style>
   form {
-    min-width: 350px;
+    min-width: 300px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    overflow: scroll;
   }
   :global(.questions > *) {
     margin-bottom: 20px;

@@ -6,6 +6,7 @@
 
   export let maxWidth: string = "auto"
   export let minWidth = "auto"
+  export let width = "auto"
 
   let optionsVisible = false
 </script>
@@ -13,7 +14,7 @@
 <div
   class="container"
   class:non-empty={selected !== undefined}
-  style="max-width: {maxWidth}; min-width: {minWidth}"
+  style="max-width: {maxWidth}; min-width: {minWidth}; width: {width}"
 >
   <div class="label" on:click={() => (optionsVisible = !optionsVisible)}>
     <div class="name">
