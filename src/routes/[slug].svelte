@@ -17,6 +17,7 @@
 <style>
   .md {
     text-align: justify;
+    max-width: 56em;
   }
   :global(li) {
     margin-top: 5px;

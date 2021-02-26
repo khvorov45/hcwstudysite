@@ -21,7 +21,6 @@
     overflow-x: hidden;
   }
   .content {
-    max-width: 56em;
     margin-top: 1em;
     margin-left: auto;
     margin-right: auto;
