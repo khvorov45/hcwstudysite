@@ -2,9 +2,11 @@
   export let variant: "icon" | "text" = "text"
   export let action: () => void = () => {}
   export let active = false
+  export let maxWidth = "auto"
 </script>
 
 <div
+  style="max-width: {maxWidth}"
   class:icon={variant === "icon"}
   class:text={variant === "text"}
   class:active

@@ -21,7 +21,7 @@
     maxWidth="350px"
   />
   <br />
-  <Button action={handleSubmit}>Submit</Button>
+  <Button action={handleSubmit} maxWidth="100px">Submit</Button>
 </form>
 
 <style>
