@@ -10,7 +10,11 @@
   let optionsVisible = false
 </script>
 
-<div class="container" style="max-width: {maxWidth}; min-width: {minWidth}">
+<div
+  class="container"
+  class:non-empty={selected !== undefined}
+  style="max-width: {maxWidth}; min-width: {minWidth}"
+>
   <div class="label" on:click={() => (optionsVisible = !optionsVisible)}>
     <div class="name">
       {label}
@@ -47,6 +51,10 @@
     border: 1px solid var(--color-bg-2);
     padding: var(--size-container-padding);
     transition: background-color var(--time-transition);
+    transition: border-color var(--time-transition);
+  }
+  .container.non-empty {
+    border-color: var(--color-primary-1);
   }
   .options-container {
     position: absolute;
