@@ -22,8 +22,6 @@
   }
   .content {
     margin-top: 1em;
-    margin-left: auto;
-    margin-right: auto;
     padding-left: 10px;
     padding-right: 10px;
   }

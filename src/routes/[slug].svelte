@@ -18,6 +18,8 @@
   .md {
     text-align: justify;
     max-width: 56em;
+    margin-left: auto;
+    margin-right: auto;
   }
   :global(li) {
     margin-top: 5px;
