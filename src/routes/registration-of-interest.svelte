@@ -1,5 +1,6 @@
 <script lang="ts">
   import Button from "../components/Button.svelte"
+  import InputField from "../components/InputField.svelte"
   import MultipleChoice from "../components/MultipleChoice.svelte"
   import Select from "../components/Select.svelte"
   import { SITES } from "../lib/config"
@@ -14,13 +15,6 @@
 <form>
   <h1>Registration of interest</h1>
   <div class="questions eligibility">
-    <MultipleChoice
-      question="Are you between 18 and 60 years of age?"
-      options={["yes", "no"]}
-    />
-  </div>
-  <br />
-  <div class="questions registration">
     <Select
       options={SITES}
       getLabel={(s) => s.long}
@@ -29,6 +23,14 @@
       minWidth="350px"
       maxWidth="350px"
     />
+    <MultipleChoice
+      question="Are you between 18 and 60 years of age?"
+      options={["yes", "no"]}
+    />
+  </div>
+  <br />
+  <div class="questions registration">
+    <InputField label="Name" />
   </div>
   <br />
   <Button action={handleSubmit} maxWidth="100px">Submit</Button>
