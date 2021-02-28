@@ -1,8 +1,8 @@
 <script lang="ts">
-  export let options: any[]
-  export let label: string
-  export let selected: any
-  export let getLabel: (x: any) => string
+  export let options: any[] = [""]
+  export let label: string = ""
+  export let selected: any = ""
+  export let getLabel: (x: any) => string = (x) => x
 
   export let maxWidth: string = "auto"
   export let minWidth = "auto"

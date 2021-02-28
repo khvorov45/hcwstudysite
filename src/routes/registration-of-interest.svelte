@@ -12,13 +12,14 @@
   let scrollbarWidth
   onMount(() => (scrollbarWidth = detectScrollbarWidth()))
 
-  let siteSelected: any = undefined
-  let screeningAge = undefined
-  let isStaff = undefined
+  let siteSelected: any
 
-  let name = ""
-  let mobile = ""
-  let email = ""
+  let screeningAge: string
+  let isStaff: string
+
+  let name: string
+  let mobile: string
+  let email: string
 
   let submitResult = {
     isLoading: false,
@@ -27,7 +28,11 @@
   }
 
   $: eligible =
-    siteSelected !== undefined && screeningAge === "yes" && isStaff === "yes"
+    screeningAge === "no" || isStaff === "no"
+      ? false
+      : screeningAge === "" || isStaff === ""
+      ? undefined
+      : screeningAge === "yes" || isStaff === "yes"
 
   $: canSubmit = eligible && (email !== "" || mobile !== "")
 
@@ -72,31 +77,38 @@
       maxWidth="500px"
       width="calc(100vw - 20px - {scrollbarWidth}px"
     />
-    <MultipleChoice
-      question="Are you a staff, volunteer, student or honorary personnel at the selected site eligible for the hospital's free vaccination program?"
-      options={["yes", "no"]}
-      bind:selected={screeningAge}
-      maxWidth="500px"
-    />
-    <MultipleChoice
-      question="Are you between 18 and 60 years of age?"
-      options={["yes", "no"]}
-      bind:selected={isStaff}
-      maxWidth="500px"
-    />
+    {#if siteSelected !== ""}
+      <MultipleChoice
+        question="Are you a staff, volunteer, student or honorary personnel at the selected site eligible for the hospital's free vaccination program?"
+        options={["yes", "no"]}
+        bind:selected={screeningAge}
+        maxWidth="500px"
+      />
+      <MultipleChoice
+        question="Are you between 18 and 60 years of age?"
+        options={["yes", "no"]}
+        bind:selected={isStaff}
+        maxWidth="500px"
+      />
+    {/if}
   </div>
-  <br />
-  <div class="questions registration">
-    <InputField bind:value={name} label="Name" />
-    <InputField bind:value={mobile} label="Mobile" />
-    <InputField bind:value={email} label="Email" />
-  </div>
-  <br />
-  <Button
-    action={handleSubmit}
-    maxWidth="100px"
-    disabled={!canSubmit || submitResult.done}>Submit</Button
-  >
+  {#if eligible}
+    <br />
+    <div class="questions registration">
+      <InputField bind:value={name} label="Name" />
+      <InputField bind:value={mobile} label="Mobile" />
+      <InputField bind:value={email} label="Email" />
+    </div>
+    <br />
+    <Button
+      action={handleSubmit}
+      maxWidth="100px"
+      disabled={!canSubmit || submitResult.done}>Submit</Button
+    >
+  {/if}
+  {#if eligible === false}
+    Ineligible
+  {/if}
 </form>
 
 <style>
