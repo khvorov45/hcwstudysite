@@ -22,7 +22,7 @@
   $: eligible =
     siteSelected !== undefined && screeningAge === "yes" && isStaff === "yes"
 
-  $: canSubmit = eligible && name !== "" && (email !== "" || mobile !== "")
+  $: canSubmit = eligible && (email !== "" || mobile !== "")
 
   function handleSubmit() {
     if (!canSubmit) {
