@@ -30,6 +30,9 @@ export default {
       replace({
         "process.browser": true,
         "process.env.NODE_ENV": JSON.stringify(mode),
+        "process.env.HCW_FLU_API_ROOT": JSON.stringify(
+          dev ? "http://localhost:7001" : "https://reports.hcwflustudy.com/api"
+        ),
         preventAssignment: true,
       }),
       svelte({

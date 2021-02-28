@@ -1,5 +1,12 @@
 {
   "spellright.language": ["en_AU"],
   "spellright.documentTypes": ["latex", "plaintext", "markdown"],
-  "cSpell.words": ["hcwstudysite", "iconify", "vercel", "unstyled"]
+  "cSpell.words": [
+    "hcwstudysite",
+    "iconify",
+    "onwarn",
+    "querify",
+    "unstyled",
+    "vercel"
+  ]
 }

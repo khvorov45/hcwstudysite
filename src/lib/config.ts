@@ -9,3 +9,5 @@ export const SITES = [
   { short: "perth", long: "Perth Children’s Hospital, Nedlands, WA" },
   { short: "sydney", long: "Children’s Hospital at Westmead, NSW" },
 ]
+
+export const API_ROOT = process.env.HCW_FLU_API_ROOT

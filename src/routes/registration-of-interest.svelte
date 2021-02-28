@@ -5,6 +5,7 @@
   import InputField from "../components/InputField.svelte"
   import MultipleChoice from "../components/MultipleChoice.svelte"
   import Select from "../components/Select.svelte"
+  import { apireq } from "../lib/api"
   import { SITES } from "../lib/config"
   import { detectScrollbarWidth } from "../lib/util"
 
@@ -19,6 +20,12 @@
   let mobile = ""
   let email = ""
 
+  let submitResult = {
+    isLoading: false,
+    error: undefined as string | undefined,
+  }
+  $: console.log(submitResult)
+
   $: eligible =
     siteSelected !== undefined && screeningAge === "yes" && isStaff === "yes"
 
@@ -28,6 +35,26 @@
     if (!canSubmit) {
       return
     }
+    submitResult.isLoading = true
+    apireq<void>({
+      path: "registration-of-interest",
+      method: "POST",
+      body: {
+        site: siteSelected,
+        isStaff,
+        screeningAge,
+        name,
+        mobile,
+        email,
+      },
+    })
+      .then(() => {
+        submitResult.isLoading = false
+      })
+      .catch((e) => {
+        submitResult.isLoading = false
+        submitResult.error = e.message
+      })
   }
 </script>
 
