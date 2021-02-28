@@ -23,8 +23,8 @@
   let submitResult = {
     isLoading: false,
     error: undefined as string | undefined,
+    done: false,
   }
-  $: console.log(submitResult)
 
   $: eligible =
     siteSelected !== undefined && screeningAge === "yes" && isStaff === "yes"
@@ -39,17 +39,19 @@
     apireq<void>({
       path: "registration-of-interest",
       method: "POST",
-      body: {
-        site: siteSelected,
-        isStaff,
-        screeningAge,
-        name,
-        mobile,
-        email,
-      },
+      body: [
+        {
+          site: siteSelected.short,
+          name: name === "" ? null : name,
+          mobile: mobile === "" ? null : mobile,
+          email: email === "" ? null : email,
+          date: new Date(),
+        },
+      ],
     })
       .then(() => {
         submitResult.isLoading = false
+        submitResult.done = true
       })
       .catch((e) => {
         submitResult.isLoading = false
@@ -90,8 +92,10 @@
     <InputField bind:value={email} label="Email" />
   </div>
   <br />
-  <Button action={handleSubmit} maxWidth="100px" disabled={!canSubmit}
-    >Submit</Button
+  <Button
+    action={handleSubmit}
+    maxWidth="100px"
+    disabled={!canSubmit || submitResult.done}>Submit</Button
   >
 </form>
 

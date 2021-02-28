@@ -8,19 +8,16 @@ const STATUS_CODES = {
 export async function apireq<T>({
   path,
   method,
-  mode,
   headers,
   body,
 }: {
   path: "registration-of-interest"
   method?: "GET" | "POST"
-  mode?: "cors" | "no-cors"
   headers?: Record<string, string>
   body?: any
 }): Promise<T> {
   const res = await fetch(`${API_ROOT}/${path}`, {
     method: method ?? "GET",
-    mode: mode ?? "no-cors",
     headers: {
       "Content-Type": "application/json",
       ...headers,
