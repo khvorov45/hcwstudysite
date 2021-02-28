@@ -28,11 +28,6 @@
     if (!canSubmit) {
       return
     }
-    console.log(
-      `site ${siteSelected?.short}
-age good ${screeningAge}
-name ${name}`
-    )
   }
 </script>
 
