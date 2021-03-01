@@ -4,25 +4,28 @@
   export let active = false
   export let maxWidth = "auto"
   export let minWidth = "auto"
+  export let width = "auto"
   export let disabled = false
   export let loading = false
   export let success = false
+
+  $: cantPress = disabled || loading || success
 </script>
 
 <div
-  style="max-width: {maxWidth}; min-width: {minWidth}"
+  style="max-width: {maxWidth}; min-width: {minWidth}; width: {width}"
   class:icon={variant === "icon"}
   class:text={variant === "text"}
   class:active
-  on:click={disabled ? () => {} : action}
+  on:click={cantPress ? () => {} : action}
   on:keyup={(e) => e.key === "Enter" && action()}
-  class:disabled={disabled || loading || success}
+  class:disabled={cantPress}
   class:success
   class:loading
   tabindex="0"
 >
   {#if loading}
-    Loading
+    ...
   {:else}
     <slot />
   {/if}

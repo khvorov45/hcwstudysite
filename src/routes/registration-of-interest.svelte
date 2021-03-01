@@ -99,15 +99,19 @@
       <InputField bind:value={mobile} label="Mobile" />
       <InputField bind:value={email} label="Email" />
     </div>
-    {#if canSubmit}
+    {#if canSubmit && !submitResult.done}
       <br />
       <Button
         action={handleSubmit}
-        maxWidth="100px"
-        disabled={!canSubmit}
+        width="55px"
+        disabled={!canSubmit && false}
         loading={submitResult.isLoading}
         success={submitResult.done}>Submit</Button
       >
+    {/if}
+    {#if submitResult.done}
+      <br />
+      Successfully submitted
     {/if}
   {/if}
   {#if eligible === false}
