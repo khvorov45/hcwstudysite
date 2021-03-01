@@ -129,6 +129,7 @@
     {/if}
   {/if}
   {#if eligible === false}
+    <br />
     Ineligible
   {/if}
 </form>
