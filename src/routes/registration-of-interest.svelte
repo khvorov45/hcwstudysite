@@ -80,6 +80,7 @@
       maxWidth="500px"
       width="calc(100vw - 20px - {scrollbarWidth}px"
       on:input={handleInputChange}
+      placeholder="..."
     />
     {#if siteSelected !== ""}
       <MultipleChoice

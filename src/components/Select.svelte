@@ -11,13 +11,14 @@
   export let maxWidth: string = "auto"
   export let minWidth = "auto"
   export let width = "auto"
+  export let placeholder = ""
 
   let optionsVisible = false
 </script>
 
 <div
   class="container"
-  class:non-empty={selected !== undefined}
+  class:non-empty={selected !== ""}
   style="max-width: {maxWidth}; min-width: {minWidth}; width: {width}"
 >
   <div class="label" on:click={() => (optionsVisible = !optionsVisible)}>
@@ -25,7 +26,7 @@
       {label}
     </div>
     <div class="selected" class:placeholder={selected === undefined}>
-      {selected ? getLabel(selected) : "select site..."}
+      {selected ? getLabel(selected) : placeholder}
     </div>
   </div>
   {#if optionsVisible}
