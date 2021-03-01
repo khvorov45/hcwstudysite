@@ -103,17 +103,17 @@
   {#if eligible}
     <br />
     <div class="questions registration">
-      <InputField bind:value={name} label="Name" on:input={handleInputChange} />
-      <InputField
-        bind:value={mobile}
-        label="Mobile"
-        on:input={handleInputChange}
-      />
       <InputField
         bind:value={email}
         label="Email"
         on:input={handleInputChange}
       />
+      <InputField
+        bind:value={mobile}
+        label="Mobile"
+        on:input={handleInputChange}
+      />
+      <InputField bind:value={name} label="Name" on:input={handleInputChange} />
     </div>
     {#if canSubmit && !submitResult.done}
       <br />
