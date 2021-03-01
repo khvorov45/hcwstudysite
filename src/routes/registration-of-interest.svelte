@@ -23,7 +23,7 @@
 
   let submitResult = {
     isLoading: false,
-    error: undefined as string | undefined,
+    error: "",
     done: false,
   }
 
@@ -64,6 +64,7 @@
       })
   }
   function handleInputChange() {
+    submitResult.error = ""
     submitResult.done = false
   }
 </script>
@@ -121,7 +122,8 @@
         width="55px"
         disabled={!canSubmit && false}
         loading={submitResult.isLoading}
-        success={submitResult.done}>Submit</Button
+        success={submitResult.done}
+        errorMsg={submitResult.error}>Submit</Button
       >
     {/if}
     {#if submitResult.done}
