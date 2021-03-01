@@ -63,6 +63,9 @@
         submitResult.error = e.message
       })
   }
+  function handleInputChange() {
+    submitResult.done = false
+  }
 </script>
 
 <form>
@@ -76,6 +79,7 @@
       minWidth="275px"
       maxWidth="500px"
       width="calc(100vw - 20px - {scrollbarWidth}px"
+      on:input={handleInputChange}
     />
     {#if siteSelected !== ""}
       <MultipleChoice
@@ -83,21 +87,31 @@
         options={["yes", "no"]}
         bind:selected={screeningAge}
         maxWidth="500px"
+        on:input={handleInputChange}
       />
       <MultipleChoice
         question="Are you between 18 and 60 years of age?"
         options={["yes", "no"]}
         bind:selected={isStaff}
         maxWidth="500px"
+        on:input={handleInputChange}
       />
     {/if}
   </div>
   {#if eligible}
     <br />
     <div class="questions registration">
-      <InputField bind:value={name} label="Name" />
-      <InputField bind:value={mobile} label="Mobile" />
-      <InputField bind:value={email} label="Email" />
+      <InputField bind:value={name} label="Name" on:input={handleInputChange} />
+      <InputField
+        bind:value={mobile}
+        label="Mobile"
+        on:input={handleInputChange}
+      />
+      <InputField
+        bind:value={email}
+        label="Email"
+        on:input={handleInputChange}
+      />
     </div>
     {#if canSubmit && !submitResult.done}
       <br />

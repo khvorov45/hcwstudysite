@@ -1,4 +1,8 @@
 <script lang="ts">
+  import { createEventDispatcher } from "svelte"
+
+  const dispatch = createEventDispatcher()
+
   export let options: any[] = [""]
   export let label: string = ""
   export let selected: any = ""
@@ -33,6 +37,7 @@
             on:click={() => {
               optionsVisible = false
               selected = option
+              dispatch("input")
             }}
           >
             {getLabel(option)}

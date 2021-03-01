@@ -5,7 +5,7 @@
 
 <div class="container">
   <div class="label">{label}</div>
-  <input bind:value class:filled={value !== ""} />
+  <input bind:value class:filled={value !== ""} on:input />
 </div>
 
 <style>

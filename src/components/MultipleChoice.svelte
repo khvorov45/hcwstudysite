@@ -1,4 +1,8 @@
 <script lang="ts">
+  import { createEventDispatcher } from "svelte"
+
+  const dispatch = createEventDispatcher()
+
   export let question = ""
   export let options = [""]
   export let selected = ""
@@ -12,7 +16,10 @@
       <div
         class="option"
         class:selected={selected === option}
-        on:click={() => (selected = option)}
+        on:click={() => {
+          selected = option
+          dispatch("input")
+        }}
       >
         {option}
       </div>
