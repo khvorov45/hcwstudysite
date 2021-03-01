@@ -5,6 +5,8 @@
   export let maxWidth = "auto"
   export let minWidth = "auto"
   export let disabled = false
+  export let loading = false
+  export let success = false
 </script>
 
 <div
@@ -12,12 +14,18 @@
   class:icon={variant === "icon"}
   class:text={variant === "text"}
   class:active
-  on:click={action}
+  on:click={disabled ? () => {} : action}
   on:keyup={(e) => e.key === "Enter" && action()}
-  class:disabled
+  class:disabled={disabled || loading || success}
+  class:success
+  class:loading
   tabindex="0"
 >
-  <slot />
+  {#if loading}
+    Loading
+  {:else}
+    <slot />
+  {/if}
 </div>
 
 <style>
@@ -54,5 +62,9 @@
     color: var(--color-font-2);
     background-color: var(--color-bg-1);
     cursor: not-allowed;
+  }
+  div.disabled.success,
+  div.disabled.loading {
+    cursor: default;
   }
 </style>

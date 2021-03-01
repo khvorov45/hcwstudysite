@@ -99,12 +99,16 @@
       <InputField bind:value={mobile} label="Mobile" />
       <InputField bind:value={email} label="Email" />
     </div>
-    <br />
-    <Button
-      action={handleSubmit}
-      maxWidth="100px"
-      disabled={!canSubmit || submitResult.done}>Submit</Button
-    >
+    {#if canSubmit}
+      <br />
+      <Button
+        action={handleSubmit}
+        maxWidth="100px"
+        disabled={!canSubmit}
+        loading={submitResult.isLoading}
+        success={submitResult.done}>Submit</Button
+      >
+    {/if}
   {/if}
   {#if eligible === false}
     Ineligible
