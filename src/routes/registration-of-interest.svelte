@@ -125,12 +125,12 @@
     {/if}
     {#if submitResult.done}
       <br />
-      Successfully submitted
+      <span class="success message">Successfully submitted</span>
     {/if}
   {/if}
   {#if eligible === false}
     <br />
-    Ineligible
+    <span class="ineligible message">Ineligible for the study</span>
   {/if}
 </form>
 
@@ -150,5 +150,8 @@
   }
   br {
     margin-top: 20px;
+  }
+  .message {
+    font-size: 20px;
   }
 </style>
