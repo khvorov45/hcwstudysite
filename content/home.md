@@ -95,8 +95,8 @@ If you are interested in participating, please [complete the form](/registration
 
 - [Women’s and Children’s Hospital, Adelaide, SA](https://www.wch.sa.gov.au)
   - Kate Riley
-    - Email:
-    - Phone:
+    - Email: virtu@adelaide.edu.au
+    - Phone: 08 8161 6328
 - [Queensland Children’s Hospital, Brisbane, QLD](https://www.childrens.health.qld.gov.au/qch)
   - HealthCare Worker Flu Project Research Staff
     - Email: chq_idhcwflu@health.qld.gov.au
