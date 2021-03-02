@@ -107,8 +107,8 @@ If you are interested in participating, please [complete the form](/registration
     - Phone: 0390 766 908
 - [John Hunter Hospital, New Lambton Heights, NSW](http://www.hnehealth.nsw.gov.au/john-hunter-hospital/Pages/Home.aspx)
   - Catherine Delahunty
-    - Email:
-    - Phone:
+    - Email: catherine.delahunty@newcastle.edu.au
+    - Phone: 0428 510 786
 - [Perth Children’s Hospital, Nedlands, WA](https://pch.health.wa.gov.au/)
   - Marion Macnish
     - Email: HCW.FluStudy@telethonkids.org.au
