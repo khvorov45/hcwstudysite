@@ -21,6 +21,7 @@
   --size-icon: 35px;
   --size-nav: 40px;
   --time-transition: 0.3s;
+  --invert-img: 100%;
 }
 
 [theme="light"] {
@@ -42,6 +43,7 @@
   --color-secondary-1: #ff4081;
   --color-secondary-1-fade: #ff408178;
   --color-error-1: #d32f2f;
+  --invert-img: 0%;
 }
 
 :focus {
