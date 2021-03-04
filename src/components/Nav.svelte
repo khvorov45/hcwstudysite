@@ -1,7 +1,6 @@
 <script lang="ts">
   import Button from "./Button.svelte"
   import Home from "./icons/Home.svelte"
-  import ThemeSwitch from "./icons/ThemeSwitch.svelte"
   import { tooltip } from "../lib/tooltip"
   import Tooltip from "./Tooltip.svelte"
   import { toggleTheme } from "../lib/theme"
@@ -44,16 +43,15 @@
       <a class:active={segment === "search"} href="search"><Search /></a>
     </div>
     <hr class="element" />
-    <div on:mouseenter={() => (settingsVisible = true)} class="element">
+    <div class="element">
       <Button variant="icon" action={toggleSettings}>
         <Settings />
       </Button>
       <Popover
         visible={settingsVisible}
         top="calc(var(--size-nav) / 2)"
-        left="calc(var(--size-icon) * -1)"
-        ><Button variant="icon" action={toggleTheme}><ThemeSwitch /></Button
-        ></Popover
+        left="-54px"
+        ><Button variant="text" action={toggleTheme}>Theme</Button></Popover
       >
     </div>
   </div>
