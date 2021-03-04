@@ -11,10 +11,14 @@
 
   export let segment: string
 
-  const tooltipOpts = (text: string, left = "0px") => ({
+  const tooltipOpts = (
+    text: string,
+    left = "0px",
+    height = "var(--size-nav)"
+  ) => ({
     component: Tooltip,
     props: {
-      height: "var(--size-nav)",
+      height,
       top: "calc(100% + 1px)",
       left,
       text,
@@ -44,9 +48,11 @@
     </div>
     <hr class="element" />
     <div class="element">
-      <Button variant="icon" action={toggleSettings}>
-        <Settings />
-      </Button>
+      <div use:tooltip={tooltipOpts("Settings", "-20px", "0px")}>
+        <Button variant="icon" action={toggleSettings}>
+          <Settings />
+        </Button>
+      </div>
       <Popover
         visible={settingsVisible}
         top="calc(var(--size-nav) / 2)"
