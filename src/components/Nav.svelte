@@ -7,6 +7,8 @@
   import { toggleTheme } from "../lib/theme"
   import Search from "./icons/Search.svelte"
   import Registration from "./icons/Registration.svelte"
+  import Popover from "./Popover.svelte"
+  import Settings from "./icons/Settings.svelte"
 
   export let segment: string
 
@@ -19,6 +21,9 @@
       text,
     },
   })
+
+  let settingsVisible = true
+  const toggleSettings = () => (settingsVisible = !settingsVisible)
 </script>
 
 <nav>
@@ -39,8 +44,17 @@
       <a class:active={segment === "search"} href="search"><Search /></a>
     </div>
     <hr class="element" />
-    <div class="element" use:tooltip={tooltipOpts("Switch theme", "-50%")}>
-      <Button variant="icon" action={toggleTheme}><ThemeSwitch /></Button>
+    <div class="element">
+      <Button variant="icon" action={toggleSettings}>
+        <Settings />
+      </Button>
+      <Popover
+        visible={settingsVisible}
+        top="calc(var(--size-nav) / 2)"
+        left="calc(var(--size-icon) * -1)"
+        ><Button variant="icon" action={toggleTheme}><ThemeSwitch /></Button
+        ></Popover
+      >
     </div>
   </div>
 </nav>
