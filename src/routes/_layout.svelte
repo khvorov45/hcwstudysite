@@ -10,10 +10,6 @@
   </div>
 </main>
 
-<main>
-  <slot />
-</main>
-
 <style>
   .scroll {
     height: calc(100vh - var(--size-nav));
