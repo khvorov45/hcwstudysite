@@ -21,7 +21,7 @@
     },
   })
 
-  let settingsVisible = true
+  let settingsVisible = false
   const toggleSettings = () => (settingsVisible = !settingsVisible)
 </script>
 
