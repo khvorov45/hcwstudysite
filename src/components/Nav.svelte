@@ -44,7 +44,7 @@
       <a class:active={segment === "search"} href="search"><Search /></a>
     </div>
     <hr class="element" />
-    <div class="element">
+    <div on:mouseenter={() => (settingsVisible = true)} class="element">
       <Button variant="icon" action={toggleSettings}>
         <Settings />
       </Button>
