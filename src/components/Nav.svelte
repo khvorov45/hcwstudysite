@@ -1,7 +1,6 @@
 <script lang="ts">
   import Button from "./Button.svelte"
   import Home from "./icons/Home.svelte"
-  import Report from "./icons/Report.svelte"
   import ThemeSwitch from "./icons/ThemeSwitch.svelte"
   import { tooltip } from "../lib/tooltip"
   import Tooltip from "./Tooltip.svelte"
