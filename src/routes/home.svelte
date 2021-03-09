@@ -184,6 +184,15 @@
   </ul>
 
   <hr />
+
+  <h2>For participants</h2>
+
+  <p>
+    See <Link href="/for-participants">here</Link> for information on how to interpret
+    your antibody results.
+  </p>
+
+  <hr />
 </TextContainer>
 
 <footer>
