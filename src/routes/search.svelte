@@ -20,8 +20,16 @@
 
 <ul>
   <li><Link href="/search">Search</Link> (this page)</li>
-  <li on:click={toggleTheme} class="theme-toggle">Theme switch (light/dark)</li>
+  <li>
+    <span class="theme-toggle" on:click={toggleTheme}
+      >Theme switch (light/dark)</span
+    >
+  </li>
 </ul>
+
+<p>Other pages</p>
+
+<ul><li><Link href="/for-participants">For participants</Link></li></ul>
 
 <hr />
 
