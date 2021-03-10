@@ -112,6 +112,8 @@
   }
 
   a {
+    display: flex;
+    align-items: center;
     text-decoration: none;
     text-transform: capitalize;
     height: calc(var(--size-nav) - var(--size-nav-border));
