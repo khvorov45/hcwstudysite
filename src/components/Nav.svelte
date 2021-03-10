@@ -63,13 +63,13 @@
       <Popover
         visible={settingsVisible}
         top="calc(var(--size-nav) / 2)"
-        left="-207px"
-        ><Button variant="text" action={toggleTheme} width="200px"
+        left="-147px"
+        ><Button variant="text" action={toggleTheme} width="140px"
           ><Switch checked={darkMode}>Dark mode</Switch></Button
         ><Button
           variant="text"
           action={() => ($tooltips = !$tooltips)}
-          width="200px"><Switch checked={$tooltips}>Tooltips</Switch></Button
+          width="140px"><Switch checked={$tooltips}>Tooltips</Switch></Button
         ></Popover
       >
     </div>
