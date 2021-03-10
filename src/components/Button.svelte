@@ -4,7 +4,7 @@
   export let active = false
   export let maxWidth = "auto"
   export let minWidth = "auto"
-  export let width = "auto"
+  export let width = variant === "icon" ? "var(--size-icon-button)" : "auto"
   export let disabled = false
   export let loading = false
   export let success = false
