@@ -8,7 +8,7 @@
   import Popover from "./Popover.svelte"
   import Settings from "./icons/Settings.svelte"
   import Switch from "./Switch.svelte"
-  import { theme } from "../lib/state"
+  import { theme, tooltips } from "../lib/state"
 
   export let segment: string
 
@@ -66,6 +66,10 @@
         left="-207px"
         ><Button variant="text" action={toggleTheme} width="200px"
           ><Switch checked={darkMode}>Dark mode</Switch></Button
+        ><Button
+          variant="text"
+          action={() => ($tooltips = !$tooltips)}
+          width="200px"><Switch checked={$tooltips}>Tooltips</Switch></Button
         ></Popover
       >
     </div>

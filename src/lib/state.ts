@@ -34,3 +34,10 @@ export const theme = createLocalStore<"dark" | "light">(
   (x) => (x === "light" ? "light" : "dark"),
   (x) => document.documentElement.setAttribute("theme", x)
 )
+
+export const tooltips = createLocalStore(
+  "tooltips",
+  true,
+  (x) => x.toString(),
+  (x) => x === "true"
+)
