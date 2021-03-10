@@ -11,7 +11,8 @@
   .switch {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    width: 100%;
   }
 
   .label {
