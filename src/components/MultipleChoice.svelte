@@ -39,7 +39,8 @@
     cursor: pointer;
     padding: 5px;
     border: 1px solid var(--color-bg-2);
-    transition: background-color var(--time-transition);
+    transition: background-color var(--time-transition),
+      border-color var(--time-transition);
     flex: 1;
     text-align: center;
     margin-right: 5px;

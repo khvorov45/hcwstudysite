@@ -43,7 +43,8 @@
     user-select: none;
     align-items: center;
     justify-content: center;
-    transition: background-color var(--time-transition);
+    transition: background-color var(--time-transition),
+      border-color var(--time-transition);
   }
   .button:hover,
   .button:focus {

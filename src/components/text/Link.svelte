@@ -9,7 +9,8 @@
     color: var(--color-primary-3);
     text-decoration: none;
     border-bottom: 1px solid rgba(0, 0, 0, 0);
-    transition: border-bottom var(--time-transition);
+    transition: border-bottom var(--time-transition),
+      color var(--time-transition);
   }
   a:hover,
   a:focus {

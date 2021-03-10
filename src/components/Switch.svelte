@@ -37,8 +37,8 @@
     position: relative;
     margin: 0;
     border: 2px solid var(--color-bg-3);
-    transition: background-color var(--time-transition);
-    transition: border-color var(--time-transition);
+    transition: background-color var(--time-transition),
+      border-color var(--time-transition);
   }
   .toggle:after {
     content: "";
@@ -49,7 +49,8 @@
     height: 24px;
     border-radius: 50%;
     background: var(--color-bg-3);
-    transition: transform var(--time-transition);
+    transition: transform var(--time-transition),
+      background-color var(--time-transition);
   }
   .toggle:checked {
     border-color: var(--color-primary-3);

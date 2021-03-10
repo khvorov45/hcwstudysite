@@ -59,8 +59,8 @@
     cursor: pointer;
     border: 1px solid var(--color-bg-2);
     padding: var(--size-container-padding);
-    transition: background-color var(--time-transition);
-    transition: border-color var(--time-transition);
+    transition: background-color var(--time-transition),
+      border-color var(--time-transition);
   }
   .container.non-empty {
     border-color: var(--color-primary-1);
@@ -75,6 +75,8 @@
     padding: var(--size-container-padding);
     border: 1px solid var(--color-bg-2);
     background-color: var(--color-bg-1);
+    transition: background-color var(--time-transition),
+      border-color var(--time-transition);
   }
   .selected {
     white-space: pre;

@@ -87,6 +87,7 @@
     height: calc(var(--size-nav) - var(--size-nav-border));
     border-bottom: var(--size-nav-border) solid var(--color-bg-2);
     font-weight: 350;
+    transition: border-color var(--time-transition);
   }
 
   .group,

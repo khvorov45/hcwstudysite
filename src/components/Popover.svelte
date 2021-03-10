@@ -18,5 +18,6 @@
   .popover-content {
     position: absolute;
     background-color: var(--color-bg-1);
+    transition: background-color var(--time-transition);
   }
 </style>
