@@ -1,6 +1,6 @@
 <script lang="ts">
   import Link from "../components/text/Link.svelte"
-  import { toggleTheme } from "../lib/theme"
+  import { theme } from "../lib/state"
 </script>
 
 <h1>Site map</h1>
@@ -21,7 +21,9 @@
 <ul>
   <li><Link href="/search">Search</Link> (this page)</li>
   <li>
-    <span class="theme-toggle" on:click={toggleTheme}
+    <span
+      class="theme-toggle"
+      on:click={() => ($theme = $theme === "dark" ? "light" : "dark")}
       >Theme switch (light/dark)</span
     >
   </li>
