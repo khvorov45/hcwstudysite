@@ -61,7 +61,6 @@
     height: var(--size-icon-button);
   }
   .text {
-    text-transform: uppercase;
     font-weight: bold;
     border: 1px solid var(--color-bg-2);
     padding: 5px;

@@ -1,6 +1,23 @@
-<input type="checkbox" class="toggle" checked />
+<script lang="ts">
+  export let checked = false
+</script>
+
+<div class="switch">
+  <div class="label"><slot /></div>
+  <input type="checkbox" class="toggle" bind:checked />
+</div>
 
 <style>
+  .switch {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .label {
+    margin-right: 10px;
+  }
+
   .toggle:focus {
     outline: 0;
   }

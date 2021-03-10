@@ -8,6 +8,7 @@
   import Registration from "./icons/Registration.svelte"
   import Popover from "./Popover.svelte"
   import Settings from "./icons/Settings.svelte"
+  import Switch from "./Switch.svelte"
 
   export let segment: string
 
@@ -54,10 +55,12 @@
         </Button>
       </div>
       <Popover
-        visible={settingsVisible}
+        visible={settingsVisible || true}
         top="calc(var(--size-nav) / 2)"
-        left="-54px"
-        ><Button variant="text" action={toggleTheme}>Theme</Button></Popover
+        left="-220px"
+        ><Button variant="text" action={toggleTheme} width="200px"
+          ><Switch>Dark mode</Switch></Button
+        ></Popover
       >
     </div>
   </div>
