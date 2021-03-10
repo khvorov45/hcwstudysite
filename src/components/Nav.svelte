@@ -3,12 +3,12 @@
   import Home from "./icons/Home.svelte"
   import { tooltip } from "../lib/tooltip"
   import Tooltip from "./Tooltip.svelte"
-  import { toggleTheme } from "../lib/theme"
   import Search from "./icons/Search.svelte"
   import Registration from "./icons/Registration.svelte"
   import Popover from "./Popover.svelte"
   import Settings from "./icons/Settings.svelte"
   import Switch from "./Switch.svelte"
+  import { theme } from "../lib/state"
 
   export let segment: string
 
@@ -28,6 +28,12 @@
 
   let settingsVisible = false
   const toggleSettings = () => (settingsVisible = !settingsVisible)
+
+  function toggleTheme() {
+    $theme = darkMode ? "light" : "dark"
+  }
+
+  $: darkMode = $theme === "dark"
 </script>
 
 <nav>
@@ -55,11 +61,11 @@
         </Button>
       </div>
       <Popover
-        visible={settingsVisible || true}
+        visible={settingsVisible}
         top="calc(var(--size-nav) / 2)"
-        left="-220px"
+        left="-207px"
         ><Button variant="text" action={toggleTheme} width="200px"
-          ><Switch>Dark mode</Switch></Button
+          ><Switch checked={darkMode}>Dark mode</Switch></Button
         ></Popover
       >
     </div>

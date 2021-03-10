@@ -1,5 +1,11 @@
 <script lang="ts">
+  import { onMount } from "svelte"
+
   import Nav from "../components/Nav.svelte"
+  import { theme } from "../lib/state"
+
+  onMount(() => theme.useLocalStorage())
+
   export let segment: string
 </script>
 
