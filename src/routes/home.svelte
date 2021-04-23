@@ -92,10 +92,6 @@
       after your illness
     </li>
     <li>
-      Each time you are seen for a blood sample, you will be given a $10 voucher
-      as compensation for your time
-    </li>
-    <li>
       The study will run for 4 years collecting samples from 2020 to 2023. The
       total time commitment for participating in this study is approximately 4
       hours per year
